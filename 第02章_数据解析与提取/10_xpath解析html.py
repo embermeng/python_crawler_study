@@ -45,6 +45,7 @@ et = etree.HTML(html)
 # 找到ul下第一个li
 # res = et.xpath("/html/body/ul/li[1]/a/text()")
 
+# 查找所有的li（可以配合属性筛选找到想要的标签）
 res = et.xpath("//li")
 for li in res:
     # ./表示当前节点（li）

@@ -11,11 +11,6 @@ resp = requests.get(url)
 resp.encoding = 'gbk'
 
 et = etree.HTML(resp.text)
-ul = et.xpath('/html/body/div/div'
-              '/div[@class="bd2"]'
-              '/div[@class="bd3"]'
-              '/div[@class="bd3r"]'
-              '/div[@class="co_area2"]'
-              '/div[@class="co_content8"]/ul')
-
-print(ul)
+tables = et.xpath('//*[@id="header"]/div/div[3]/div[5]/div[2]/div[2]/div[2]/ul/table')
+for table in tables:
+    table.xpath('./tbody/')
