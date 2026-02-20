@@ -3,3 +3,5 @@ lxml~=6.0.2
 pyquery
 aiohttp
 beautifulsoup4
+aiofiles
+selenium
